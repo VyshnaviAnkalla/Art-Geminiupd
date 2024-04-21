@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CanvasEcho - Online Art Gallery</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    main {
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .artwork {
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .artwork img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .artwork:hover img {
+      transform: scale(1.1);
+    }
+
+    .artwork-info {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      transition: opacity 0.3s ease;
+    }
+
+    .artwork:hover .artwork-info {
+      opacity: 1;
+    }
+
+    .artwork-info p {
+      padding: 20px;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CanvasEcho</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Exhibitions</a></li>
+        <li><a href="#">Artists</a></li>
+        <li><a href="#">Memberships</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Featured Artworks</h2>
+
+    <section class="art-grid">
+      <article class="artwork">
+        <img src="image1.jpg" alt="Artwork 1">
+        <div class="artwork-info">
+          <p onmouseover="showInfo(this)">Vincent van Gogh, 1889</p>
+        </div>
+      </article>
+
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 CanvasEcho. All rights reserved.</p>
+    <form action="#">
+      <label for="email">Subscribe to our Newsletter:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="social-sharing">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    
